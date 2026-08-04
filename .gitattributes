@@ -1,0 +1,2 @@
+project[[:space:]]demo.mp4 filter=lfs diff=lfs merge=lfs -text
+instantclient-basiclite-windows.x64-19.31.0.0.0dbru/* filter=lfs diff=lfs merge=lfs -text
