@@ -328,7 +328,3 @@ Streamlit Dashboard
 ```
 
 ---
-
-# 👨‍💻 Author
-
-Enterprise Data Engineering Project
