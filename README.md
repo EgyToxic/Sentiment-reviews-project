@@ -1,82 +1,165 @@
 # 🛍️ Enterprise Sentiment Analysis Data Warehouse
 
-## 📌 عن المشروع
-هذا المشروع عبارة عن نظام هندسة بيانات متكامل (Data Engineering System) يهدف إلى استخراج تقييمات العملاء، تحليلها باستخدام الذكاء الاصطناعي (Machine Learning)، وتخزينها في مستودع بيانات مؤسسي (Enterprise Data Warehouse) مصمم بهيكل **Star Schema**. كما يحتوي على لوحة تحكم تفاعلية (Dashboard) لعرض الإحصائيات وإدخال بيانات جديدة.
+## 📌 About The Project
 
-## 🛠️ التقنيات المستخدمة (Tech Stack)
-- **قاعدة البيانات:** Oracle Database 11g Express Edition (XE)
-- **برمجة مسار البيانات (ETL):** Python (Pandas, oracledb)
-- **الذكاء الاصطناعي (AI):** Scikit-Learn (Logistic Regression & TF-IDF)
-- **واجهة المستخدم (UI):** Streamlit
+هذا المشروع عبارة عن نظام هندسة بيانات متكامل (Data Engineering System) يهدف إلى:
 
----
-
-## ⚙️ متطلبات التشغيل الأساسية (Prerequisites)
-قبل تشغيل المشروع، تأكد من توافر الآتي على جهازك:
-1. تثبيت **Python 3.9+**
-2. تثبيت **Oracle Database 11g**
-3. تحميل ملفات **Oracle Instant Client 19c** (نسخة x64) وفك ضغطها في مسار معروف لتفعيل وضع الـ Thick Mode (الضروري للاتصال بـ Oracle 11g)
+- استخراج تقييمات العملاء.
+- تنظيف ومعالجة البيانات.
+- تحليل المشاعر باستخدام تقنيات الذكاء الاصطناعي (Machine Learning).
+- تخزين النتائج داخل مستودع بيانات مؤسسي (Enterprise Data Warehouse).
+- تصميم قاعدة البيانات باستخدام **Star Schema**.
+- عرض البيانات والتحليلات من خلال لوحة تحكم تفاعلية باستخدام Streamlit.
 
 ---
 
-## 🚀 خطوات التشغيل الكاملة (Complete Setup Guide)
+# 🎬 Project Demo
 
-### الخطوة الأولى: إعداد قاعدة البيانات (Database Setup)
+> 💡 شاهد طريقة عمل النظام ولوحة التحكم التفاعلية:
 
-1. قم بفتح موجه الأوامر (CMD) وادخل إلى قاعدة البيانات بصلاحيات المدير:
+```
+https://github.com/user-attachments/assets/YOUR_VIDEO_ID_HERE
+```
+
+> ملاحظة: قم برفع الفيديو داخل GitHub عن طريق Drag & Drop ثم استبدل الرابط السابق بالرابط الذي سيتم إنشاؤه.
+
+---
+
+# 🛠️ Tech Stack
+
+## Database
+- Oracle Database 11g Express Edition (XE)
+
+## ETL Pipeline
+- Python
+- Pandas
+- oracledb
+
+## Artificial Intelligence
+- Scikit-Learn
+- TF-IDF
+- Logistic Regression
+
+## User Interface
+- Streamlit
+
+---
+
+# ⚙️ Prerequisites
+
+قبل تشغيل المشروع يجب توفر:
+
+1. Python 3.9+
+2. Oracle Database 11g XE
+3. Oracle Instant Client 19c (x64)
+
+يستخدم Oracle Instant Client لتفعيل Thick Mode والاتصال مع Oracle Database 11g.
+
+---
+
+# 🚀 Complete Setup Guide
+
+# 1️⃣ Database Setup
+
+## الدخول إلى Oracle كمدير:
+
 ```bash
 sqlplus / as sysdba
 ```
 
-2. إنشاء المستخدم الخاص بالمشروع ومنحه الصلاحيات:
+---
+
+## إنشاء مستخدم المشروع:
+
 ```sql
 CREATE USER REVIEWS_DWH IDENTIFIED BY admin123;
+
 GRANT ALL PRIVILEGES TO REVIEWS_DWH;
 ```
 
-3. تسجيل الدخول بالمستخدم الجديد:
-- **Username:** `REVIEWS_DWH`
-- **Password:** `admin123`
+---
 
-4. تشغيل ملف إنشاء الجداول:
-قم بتنفيذ ملف `database_setup.sql` لإنشاء Star Schema تلقائياً.
+## بيانات تسجيل الدخول:
+
+```
+Username:
+REVIEWS_DWH
+
+Password:
+admin123
+```
 
 ---
 
-### الخطوة الثانية: إعداد بيئة بايثون (Python Environment)
+## إنشاء جداول قاعدة البيانات:
 
-1. افتح التيرمنال داخل مجلد المشروع.
-2. ثبّت المكتبات المطلوبة:
+قم بتنفيذ الملف:
+
+```
+database_setup.sql
+```
+
+سيتم إنشاء تصميم الـ Star Schema تلقائياً.
+
+---
+
+# 2️⃣ Python Environment Setup
+
+افتح Terminal داخل مجلد المشروع ثم قم بتنفيذ:
+
 ```bash
 pip install -r requirements.txt
 ```
 
 ---
 
-### الخطوة الثالثة: ضبط مسار Oracle Instant Client
+# 3️⃣ Oracle Instant Client Configuration
 
-- افتح ملف `etl_pipeline.py` وملف `app.py`.
-- ابحث عن المتغير:
-  ```python
-  instant_client_dir
-  ```
-- عدّل المسار ليطابق مكان تثبيت **Oracle Instant Client 19c** على جهازك.
+افتح الملفات:
+
+```
+etl_pipeline.py
+app.py
+```
+
+وابحث عن:
+
+```python
+instant_client_dir
+```
+
+ثم قم بتعديل المسار إلى مكان تثبيت:
+
+```
+Oracle Instant Client 19c
+```
+
+على جهازك.
 
 ---
 
-## ▶️ تشغيل النظام (Running the System)
+# ▶️ Running The System
 
-### 1. تشغيل ETL Pipeline
+## 1. تشغيل ETL Pipeline
+
+نفذ:
+
 ```bash
 python etl_pipeline.py
 ```
 
-انتظر حتى تظهر رسالة:
-> ✅ مبروك! الـ ETL Pipeline اكتمل
+بعد نجاح التشغيل ستظهر الرسالة:
+
+```
+✅ مبروك! الـ ETL Pipeline اكتمل
+```
 
 ---
 
-### 2. تشغيل لوحة التحكم (Streamlit Dashboard)
+## 2. تشغيل Dashboard
+
+نفذ:
+
 ```bash
 streamlit run app.py
 ```
@@ -85,11 +168,167 @@ streamlit run app.py
 
 ---
 
-## 📂 هيكل قاعدة البيانات (Data Architecture)
+# 🏗️ Data Warehouse Architecture
 
-تم تصميم مستودع البيانات بنظام **Star Schema** ويتكون من:
+تم تصميم مستودع البيانات باستخدام:
 
-- **Fact_Reviews**: الجدول الرئيسي الذي يحتوي على التقييمات ونتائج تحليل المشاعر.
-- **Dim_Product**: بيانات المنتجات وتصنيفاتها.
-- **Dim_Date**: الأبعاد الزمنية (يوم، شهر، سنة).
+# ⭐ Star Schema
+
+
 ```
+                 Dim_Product
+                      |
+                      |
+                      |
+Dim_Date -------- Fact_Reviews
+                      |
+                      |
+              Sentiment Analysis
+```
+
+
+---
+
+# 📂 Database Tables
+
+## Fact_Reviews
+
+الجدول الأساسي ويحتوي على:
+
+- Customer Reviews
+- Ratings
+- Sentiment Results
+- Product References
+- Date References
+
+
+---
+
+## Dim_Product
+
+يحتوي على:
+
+- Product ID
+- Product Name
+- Product Category
+
+
+---
+
+## Dim_Date
+
+يحتوي على:
+
+- Date ID
+- Day
+- Month
+- Year
+
+
+---
+
+# 🤖 Machine Learning Pipeline
+
+
+```
+Customer Reviews
+
+        |
+        v
+
+Data Cleaning
+
+        |
+        v
+
+TF-IDF Vectorization
+
+        |
+        v
+
+Logistic Regression Model
+
+        |
+        v
+
+Sentiment Prediction
+
+        |
+        v
+
+Oracle Data Warehouse
+```
+
+---
+
+# 📁 Project Structure
+
+
+```
+Enterprise-Sentiment-Analysis/
+
+│
+├── app.py
+│
+├── etl_pipeline.py
+│
+├── database_setup.sql
+│
+├── requirements.txt
+│
+├── README.md
+│
+└── data/
+    │
+    └── reviews.csv
+
+```
+
+---
+
+# ✅ Features
+
+✔ Automated ETL Pipeline  
+✔ Data Cleaning & Transformation  
+✔ Machine Learning Sentiment Classification  
+✔ Oracle Enterprise Data Warehouse  
+✔ Star Schema Design  
+✔ Interactive Streamlit Dashboard  
+✔ Product & Date Dimensions  
+✔ Sentiment Analytics  
+
+---
+
+# 📊 System Workflow
+
+
+```
+Data Source
+
+     |
+     v
+
+Python ETL Pipeline
+
+     |
+     v
+
+Machine Learning Model
+
+     |
+     v
+
+Oracle Data Warehouse
+
+     |
+     v
+
+Streamlit Dashboard
+
+```
+
+---
+
+# 👨‍💻 Author
+
+Enterprise Data Engineering Project
