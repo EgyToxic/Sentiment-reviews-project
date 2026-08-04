@@ -18,7 +18,9 @@
 > 💡 شاهد طريقة عمل النظام ولوحة التحكم التفاعلية:
 
 ```
-https://github.com/EgyToxic/Sentiment-reviews-project/blob/main/project%20demo.mp4
+<video src="PASTE_YOUR_COPIED_LINK_HERE" controls="controls" style="max-width: 100%;">
+  Your browser does not support the video tag. You can <a href="PASTE_YOUR_COPIED_LINK_HERE">download the video here</a>.
+</video>
 ```
 
 > ملاحظة: قم برفع الفيديو داخل GitHub عن طريق Drag & Drop ثم استبدل الرابط السابق بالرابط الذي سيتم إنشاؤه.
