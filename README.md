@@ -16,10 +16,9 @@
 # 🎬 Project Demo
 
 > 💡 شاهد طريقة عمل النظام ولوحة التحكم التفاعلية:
+---
 
-<video src="https://github.com/EgyToxic/Sentiment-reviews-project/raw/main/project%20demo.mp4" controls="controls" style="max-width: 100%;">
-  Your browser does not support the video tag. You can <a href="https://github.com/EgyToxic/Sentiment-reviews-project/raw/main/project%20demo.mp4">download the video here</a>.
-</video>
+[![Watch Demo on Google Drive](https://img.shields.io/badge/▶️_Watch_Demo_Video-Google_Drive-red?style=for-the-badge&logo=googledrive&logoColor=white)](https://drive.google.com/file/d/1bwoJY5SJxUG_Py9ql-WMVxSaKSjX8TdF/view?usp=drive_link)
 
 ---
 
