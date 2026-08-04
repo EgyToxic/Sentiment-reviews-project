@@ -17,8 +17,8 @@
 
 > 💡 شاهد طريقة عمل النظام ولوحة التحكم التفاعلية:
 
-<video src="PASTE_YOUR_COPIED_LINK_HERE" controls="controls" style="max-width: 100%;">
-  Your browser does not support the video tag. You can <a href="[PASTE_YOUR_COPIED_LINK_HERE](https://github.com/EgyToxic/Sentiment-reviews-project/raw/refs/heads/main/project%20demo.mp4?download=)">download the video here</a>.
+<video src="https://github.com/EgyToxic/Sentiment-reviews-project/raw/main/project%20demo.mp4" controls="controls" style="max-width: 100%;">
+  Your browser does not support the video tag. You can <a href="https://github.com/EgyToxic/Sentiment-reviews-project/raw/main/project%20demo.mp4">download the video here</a>.
 </video>
 
 ---
